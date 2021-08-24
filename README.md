@@ -14,11 +14,11 @@
 
 
 + RedHat OpenShift Service Mesh ES
-    + [Introduccion](rhocp-servicemesh/chap1-en.md)
-    + [Instalacion](rhocp-servicemesh/chap2-en.md)
-    + [Observando Service Mesh](rhocp-servicemesh/chap3-en.md)
-    + [Controlando Trafico de Servicio](rhocp-servicemesh/chap4-en.md)
-    + [Desplegando Aplicaciones con OpenShift Service Mesh](rhocp-servicemesh/chap5-en.md)
-    + [Testear Servicios Resilientes con Chaos Testing](rhocp-servicemesh/chap6-en.md)
-    + [Creando Servicios Resilientes](rhocp-servicemesh/chap7-en.md)
+    + [Introduccion](rhocp-servicemesh/chap1-es.md)
+    + [Instalacion](rhocp-servicemesh/chap2-es.md)
+    + [Observando Service Mesh](rhocp-servicemesh/chap3-es.md)
+    + [Controlando Trafico de Servicio](rhocp-servicemesh/chap4-es.md)
+    + [Desplegando Aplicaciones con OpenShift Service Mesh](rhocp-servicemesh/chap5-es.md)
+    + [Testear Servicios Resilientes con Chaos Testing](rhocp-servicemesh/chap6-es.md)
+    + [Creando Servicios Resilientes](rhocp-servicemesh/chap7-es.md)
     + Securitizando OpenShift Service Mesh *Proximamente*
