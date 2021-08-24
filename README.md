@@ -1,6 +1,6 @@
-# Docs & miscellaneous
+# Docs & miscellaneous 
 
-+ [Cloud-Pratitioner](cloud-pratitioner/README.md)
++ [Cloud-Pratitioner](cloud-pratitioner/README.md) *Sin terminar*
 
 + RedHat OpenShift Service Mesh EN
     + [Introduction](rhocp-servicemesh/chap1-en.md)
