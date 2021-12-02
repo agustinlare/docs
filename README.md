@@ -1,5 +1,10 @@
 # Docs & miscellaneous 
 
++ [Liveness, Readiness y Startup probes](k8s-probes/probes.md)
+    + [TLDR + Examples](k8s-probes/tldr.md)
+
++ [OOM Killed JVM Sizing](k8s-oomkill/k8s-ommkill.md)
+
 + [Cloud-Pratitioner](cloud-pratitioner/README.md) *Sin terminar*
 
 + RedHat OpenShift Service Mesh EN
