@@ -1,4 +1,4 @@
-# OCP Probes: Startup, Liveness & Readiness
+# Kuberenetes Probes: Startup, Liveness & Readiness
 
 Los probes juegan una esencial parte en la ecuación de la alta disponibilidad de las aplicaciones o microservicios, como tambien la mala configuración de estos puede afectarla de manera adversa. Es de vital importancia la configuración apropiada y testing de diferentes escenarios para encontrar los valores óptimos de configuración. Los probes solamente determinan la *health* de la aplicación basado en la respuesta del probe, pero no estan al tanto de la dinamica de nuestra aplicacion o microservicio. Si por alguna razón la probe responde con delay mas alla del `periodSeconds` y `failureThreshold` va a ser determinada como *unhealthy* y el reinicio del pod va a ser disparado.
 
