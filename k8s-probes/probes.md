@@ -6,7 +6,7 @@ Los probes juegan una esencial parte en la ecuación de la alta disponibilidad d
 
 Los pods tienen *fases* y *condiciones*, *containers* tienen estados. Las propiedades de los estados pueden cambiar segun el resultado de los probes que se realicen.
 
-![probes.png](../img/probes.png)
+![probes.png](img/probes.png)
 
 ## Fases de pods
 El objeto status de cada pod contiene un campo llamado *phase*. Este campo le dice a Kubernetes en que parte del ciclo de ejecución un pod se encuentra.
