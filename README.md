@@ -7,6 +7,8 @@
 
 + [OOM Killed JVM Sizing](k8s-oomkill/k8s-ommkill.md)
 
++ [AWS RDS vs Aurora Comparacion](aws-analisis-rds-vs-aurora.md)
+
 + [Cloud-Pratitioner](cloud-pratitioner/README.md) *Sin terminar*
 
 + RedHat OpenShift Service Mesh EN
