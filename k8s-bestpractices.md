@@ -10,3 +10,5 @@
 8. Adptar particuas apropiadas de seguridad como setgmentacion de red, utilizacion de role-based acccess control (`RBAC`), y utilizacion de protocolos seguros de comunicacion entre componentes es vital para mantener la seguridad del cluster.
 9. Realizar backups con regualidad, almacenar configuracion y secretos del cluster es importante ante un evento de disaster recovery.
 10. Versionar y tagging imagenes de containers ayuda a poder realizar faciles rollbacks y seguimiento de nuestras aplicaciones.
+
+> Fuente: Syed Nadeem
