@@ -1,4 +1,4 @@
-# Kubernetes best Practices
+# Kubernetes Best Practices
 
 1. Utilizar `namespaces` para organizar y aisarla recurssos dentro de un cluster para mejorar la administracion y la escalabilidad de las aplicaciones.
 2. `ConfigMaps` y `Secrets` son esenciales para manejar configuracion y secretos de manera segura y eficiente.
