@@ -1,5 +1,7 @@
 # Docs & miscellaneous 
 
++ [Kubernetes Best Practices 101](https://github.com/agustinlare/docs/blob/master/k8s-bestpractices.md)
+
 + [Liveness, Readiness y Startup probes](k8s-probes/probes.md)
     + [TLDR + Examples](k8s-probes/tldr.md)
 
