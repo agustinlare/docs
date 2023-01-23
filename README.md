@@ -1,6 +1,10 @@
 # My swiss army knife repo
 
-## Scripts
+## Index
++ [Scripts](https://github.com/agustinlare/docs#scripts)
++ [Docs](https://github.com/agustinlare/docs#docs)
+
+### Scripts
 
 + [Install aws-cli](https://gist.github.com/agustinlare/72d406baf40609d1e66fa9102d472c0e)
 + [Install mongosh](https://gist.github.com/agustinlare/6d49284d938f6da6b0d3df252dab0eee)
@@ -19,7 +23,7 @@
 + [Quick python app thing](https://gist.github.com/agustinlare/1f7c7e7195ec52b8a5aa19b1b598d86b)
 
 
-## Docs  
+### Docs  
 
 + [Kubernetes Best Practices 101](k8s-bestpractices.md)
 
