@@ -1,8 +1,8 @@
 # My swiss army knife repo
 
 ## Index
-+ [Scripts](https://github.com/agustinlare/docs#scripts)
-+ [Docs](https://github.com/agustinlare/docs#docs)
++ [Scripts](#scripts)
++ [Docs](#docs)
 
 ### Scripts
 
