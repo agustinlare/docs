@@ -1,6 +1,7 @@
 # My swiss army knife repo
 
 ## Index
+
 + [Scripts](#scripts)
 + [Docs](#docs)
 
@@ -21,7 +22,8 @@
 + [RH Quay backup](https://gist.github.com/agustinlare/be77522e29aee247a585adbd71fb1064)
 + [Node state email notification](https://gist.github.com/agustinlare/d46a11d91a2a52278add84ac4dd463b8)
 + [Quick python app thing](https://gist.github.com/agustinlare/1f7c7e7195ec52b8a5aa19b1b598d86b)
-
++ [All in one Pod manifest](https://gist.github.com/agustinlare/62d259d398f2c8f743f77a01e2b6dced)
++ [Awful Bash deploy with Helm and notification to Google Chat](https://gist.github.com/agustinlare/12e314cdd69317bafbcf543b6efbf1d6)
 
 ### Docs  
 
