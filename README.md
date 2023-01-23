@@ -1,6 +1,8 @@
 # Docs & miscellaneous 
 
-+ [Kubernetes Best Practices 101](https://github.com/agustinlare/docs/blob/master/k8s-bestpractices.md)
++ [Kubernetes Best Practices 101](k8s-bestpractices.md)
+
++ [Best practices to follow for deployment or change management](cicd-best-practices.md)
 
 + [Liveness, Readiness y Startup probes](k8s-probes/probes.md)
     + [TLDR + Examples](k8s-probes/tldr.md)
