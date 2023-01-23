@@ -1,4 +1,25 @@
-# Docs & miscellaneous 
+# My swiss army knife repo
+
+## Scripts
+
+[Install aws-cli](https://gist.github.com/agustinlare/72d406baf40609d1e66fa9102d472c0e)
+[Install mongosh](https://gist.github.com/agustinlare/6d49284d938f6da6b0d3df252dab0eee)
+[Elasticsearch log overflow search](https://gist.github.com/agustinlare/4e25f436b8ad1a0ba1cb2183a5855b1f)
+[1Password API calls](https://gist.github.com/agustinlare/bf9a96134cebc15fb5557fa025d10b12)
+[Run all AWS Pipelines](https://gist.github.com/agustinlare/f9560870b3f6dcbc5e47332f08e2e3f5)
+[TFC Upload mass env_vars to variableset](https://gist.github.com/agustinlare/b1143cc82327a61d7015a36d5b134f56)
+[Install helm-3.8.2](https://gist.github.com/agustinlare/719479d8e1f63ae5ff25c8befa4fe77a)
+[Stop RDS Instances](https://gist.github.com/agustinlare/565ec15bc0d09e34cf8d06d9ff5ff52c)
+[Delete AWS EC2 Snapshot by tag](https://gist.github.com/agustinlare/4ce37efc88f7d1d76c6185ca27884388)
+[StorageGRID NetApp ABM](https://gist.github.com/agustinlare/ee212d97f35990b9dcd03dde30697064)
+[Python json to Object](https://gist.github.com/agustinlare/ceb13cc06b234c4a411785cdb561e098)
+[Delete all Openshift pods in terminating](https://gist.github.com/agustinlare/7653f56d4b6a053fe80a1b5f3deaf971)
+[RH Quay backup](https://gist.github.com/agustinlare/be77522e29aee247a585adbd71fb1064)
+[Node state email notification](https://gist.github.com/agustinlare/d46a11d91a2a52278add84ac4dd463b8)
+[Quick python app thing](https://gist.github.com/agustinlare/1f7c7e7195ec52b8a5aa19b1b598d86b)
+
+
+## Docs  
 
 + [Kubernetes Best Practices 101](k8s-bestpractices.md)
 
