@@ -65,3 +65,4 @@
 + [Migration of documents from S3 Bucket to 1Password-cli ](https://gist.github.com/agustinlare/0fe1c1c0443964c7d4f3c5dd5cb6ba8a)
 + [Get size of logs within local docker](https://gist.github.com/agustinlare/e15f12f5c3493086937543540496f3f9)
 + [Refresh iptables in case of ip changed](https://gist.github.com/agustinlare/2fec6ceb08bbbc22c3c260ebda05bfd7)
++ [Dolar by chat cronjob](https://gist.github.com/agustinlare/58e1ae9d6685c0eca543b06018fb0c1f)
