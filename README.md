@@ -1,6 +1,6 @@
 # My swiss army knife repo
 
-Things I code once and dont want to google them any again.
+Things
 
 ## Index
 
