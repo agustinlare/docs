@@ -61,4 +61,5 @@
 + [All in one Pod manifest](https://gist.github.com/agustinlare/62d259d398f2c8f743f77a01e2b6dced)
 + [Awful Bash deploy with Helm and notification to Google Chat](https://gist.github.com/agustinlare/12e314cdd69317bafbcf543b6efbf1d6)
 + [Scale K8s-deployments of specific prefix](https://gist.github.com/agustinlare/ec195859bd83d098121f8efb7006a1e9)
++ [Postgres script creates user and db](https://gist.github.com/agustinlare/5bc286bf8f3fc3cdcd20d5b01df4da39)
 
