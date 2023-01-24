@@ -68,3 +68,4 @@ Things I code once and dont want to google them any again.
 + [Get size of logs within local docker](https://gist.github.com/agustinlare/e15f12f5c3493086937543540496f3f9)
 + [Refresh iptables in case of ip changed](https://gist.github.com/agustinlare/2fec6ceb08bbbc22c3c260ebda05bfd7)
 + [Dolar by chat cronjob](https://gist.github.com/agustinlare/58e1ae9d6685c0eca543b06018fb0c1f)
++ [Get all registered domains in amplify](https://gist.github.com/agustinlare/e10c8024846e949e4ce48d06e0fec345)
