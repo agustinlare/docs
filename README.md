@@ -63,4 +63,4 @@
 + [Scale K8s-deployments of specific prefix](https://gist.github.com/agustinlare/ec195859bd83d098121f8efb7006a1e9)
 + [Postgres script creates user and db](https://gist.github.com/agustinlare/5bc286bf8f3fc3cdcd20d5b01df4da39)
 + [ Migration of documents from S3 Bucket to 1Password-cli ](https://gist.github.com/agustinlare/0fe1c1c0443964c7d4f3c5dd5cb6ba8a)
-
++ [Get size of logs within local docker](https://gist.github.com/agustinlare/e15f12f5c3493086937543540496f3f9)
