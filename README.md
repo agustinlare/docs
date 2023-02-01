@@ -20,7 +20,7 @@ Things
 
 + [AWS Virtual Private Cloud](aws-vpc.md) *EN*
 
-+ [AWS Virtual Private Cloud](aws-vpc.md) *ES* *En construccion*
++ [AWS Virtual Private Cloud](aws-vpc-es.md) *ES*
 
 + [AWS RDS vs Aurora Comparacion](aws-analisis-rds-vs-aurora.md)
 
