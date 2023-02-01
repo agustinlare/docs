@@ -75,3 +75,46 @@ Network ACL is apply to the subnet level, filters entering and exiting traffic o
 - Does not support transitive peering, full mesh required
 
 ![vpc-peering.drawio.png](./_resources/vpc-peering.drawio.png)
+
+## VPC Endpoints
+
+![vpc-interfaceendpoints.drawio.png](./_resources/vpc-interfaceendpoints.drawio.png)
+
+## VPC Gateway Endpoint
+
+![vpc-gatewayendpoint.drawio.png](./_resources/vpc-gatewayendpoint.drawio.png)
+
+|     | Interface Endpoint | Gateway Endpoint |
+| --- | --- | --- |
+| What | Elastic Network Interface with a Private IP | A gateway that is a target for specific route |
+| How | Uses DNS Entries to redirect traffic | Uses prefix list in the route table to redirect |
+| Which services | API Gateway, CloudFormation, CloudWatch, etc. | Amazon S3, DynamoDB |
+| Security | Security Groups | VPC Endpoint Policies |
+
+![service-provider-model.drawio.png](./_resources/service-provider-model.drawio.png)
+
+## AWS Client VPN
+
+![aws-client-vpn.drawio.drawio.png](./_resources/aws-client-vpn.drawio.drawio.png)
+
+## AWS Site-to-Side VPN
+
+![aws-site-to-site-vpn.drawio.png](./_resources/aws-site-to-site-vpn.drawio.png)
+
+## AWS VPN CloudHub
+
+![aws-vpn-cloudhub.drawio.drawio.png](./_resources/aws-vpn-cloudhub.drawio.drawio.png)
+
+## AWS Transit Gateway
+
+Connects your Amazon Virtual Private Clouds (VPCs) and on-premises networks through a central hub. This connection simplifies your network and puts an end to complex peering relationships. Transit Gateway acts as a highly scalable cloud router—each new connection is made only once.
+
+![aws-transit-gateway.drawio.drawio.png](./_resources/aws-transit-gateway.drawio.drawio.png)
+
+## VPC Flow Logs
+
+Captures information about the IP traffic going to and from network interfaces in a VPC. This data is stored using amazon CloudWatch Log or S3 and can be created at the following levels:
+
+- VPC
+- Subnet
+- Network interface (ENI attached to a EC2 instance)
