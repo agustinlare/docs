@@ -6,8 +6,14 @@ Things
 
 + [Scripts](#scripts)
 + [Docs](#docs)
+    + [Kubernetes](#kubernetes)
+    + [Amazon](#amazon)
+    + [Openshift](#openshift-4)
 
-### Docs  
+
+### Docs
+
+#### Kubernetes
 
 + [Kubernetes Best Practices 101](k8s-bestpractices.md)
 
@@ -18,13 +24,20 @@ Things
 
 + [OOM Killed JVM Sizing](k8s-oomkill/k8s-ommkill.md)
 
+#### Amazon
+
 + [AWS Virtual Private Cloud](aws-vpc.md) *EN*
 
 + [AWS Virtual Private Cloud](aws-vpc-es.md) *ES*
 
 + [AWS RDS vs Aurora Comparacion](aws-analisis-rds-vs-aurora.md)
 
-+ [Cloud-Pratitioner](cloud-pratitioner/README.md) *Sin terminar*
++ [AWS Security Specialist](aws-security-specialist.md)
+
++ [Cloud-Pratitioner](cloud-pratitioner/README.md) *Abandonado*
+
+
+#### Openshift 4
 
 + RedHat OpenShift Service Mesh EN
     + [Introduction](rhocp-servicemesh/chap1-en.md)
