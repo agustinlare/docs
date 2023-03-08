@@ -4,37 +4,31 @@ Things
 
 ## Index
 
-+ [Scripts](#scripts)
-+ [Docs](#docs)
-    + [Kubernetes](#kubernetes)
-    + [Amazon](#amazon)
-    + [Openshift](#openshift-4)
-
+- [My swiss army knife repo](#my-swiss-army-knife-repo)
+  - [Index](#index)
+    - [Docs](#docs)
+      - [Kubernetes](#kubernetes)
+      - [Amazon](#amazon)
+      - [Openshift 4](#openshift-4)
+    - [Scripts](#scripts)
 
 ### Docs
 
 #### Kubernetes
 
 + [Kubernetes Best Practices 101](k8s-bestpractices.md)
-
 + [Best practices to follow for deployment or change management](cicd-best-practices.md)
-
 + [Liveness, Readiness y Startup probes](k8s-probes/probes.md)
     + [TLDR + Examples](k8s-probes/tldr.md)
-
 + [OOM Killed JVM Sizing](k8s-oomkill/k8s-ommkill.md)
 
 #### Amazon
 
 + [AWS Virtual Private Cloud](aws-vpc.md) *EN*
-
 + [AWS Virtual Private Cloud](aws-vpc-es.md) *ES*
-
++ [AWS Cloud Practitioner](aws-cloudpratictioner.md)  # Not finished
 + [AWS RDS vs Aurora Comparacion](aws-analisis-rds-vs-aurora.md)
-
-+ [AWS Security Specialist](aws-security-specialist.md)
-
-+ [Cloud-Pratitioner](cloud-pratitioner/README.md) *Abandonado*
++ [AWS Security Specialist](aws-security-specialist.md) # Not finished
 
 
 #### Openshift 4
