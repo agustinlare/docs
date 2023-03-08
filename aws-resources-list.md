@@ -91,3 +91,6 @@ Amazon Kinesis Data Analytics is the easiest way to process data streams in real
 ## Amazon EMR 
 
 Amazon EMR is the industry-leading cloud big data solution for petabyte-scale data processing, interactive analytics, and machine learning using open-source frameworks such as Apache Spark, Apache Hive, and Presto. 
+
+## AWS Budgets 
+Service that helps you set custom cost and usage budgets for your AWS resources and monitor your progress towards those budgets. It sends you alerts when you exceed (or are forecasted to exceed) your budgeted amounts, enabling you to take timely corrective actions to optimize your AWS spending.

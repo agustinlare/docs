@@ -1,5 +1,22 @@
 # AWS VPC
 
+- [AWS VPC](#aws-vpc)
+  - [CIDR](#cidr)
+  - [VPC](#vpc)
+    - [Amazon VPC Components](#amazon-vpc-components)
+    - [CIDR Rules and guidelines](#cidr-rules-and-guidelines)
+    - [VPC CIDR Blocks and Subnets](#vpc-cidr-blocks-and-subnets)
+  - [Security Groups and Network ACL](#security-groups-and-network-acl)
+  - [VPC Peering](#vpc-peering)
+  - [VPC Endpoints](#vpc-endpoints)
+  - [VPC Gateway Endpoint](#vpc-gateway-endpoint)
+  - [AWS Client VPN](#aws-client-vpn)
+  - [AWS Site-to-Side VPN](#aws-site-to-side-vpn)
+  - [AWS VPN CloudHub](#aws-vpn-cloudhub)
+  - [AWS Transit Gateway](#aws-transit-gateway)
+  - [VPC Flow Logs](#vpc-flow-logs)
+
+
 ## CIDR
 
 ![cidr.png](./_resources/cidr.png)
@@ -8,7 +25,7 @@
 
 It's a virtual network dedicated to your AWS account, that its logically isolated from other virtual networks in the AWS Cloud and provides complete control over the virtual networking enviroment (IP range, subnets, route tables and gateways) from where you launch AWS Resources such as AWS EC2 Instances.
 
-At creation its required to specify a range of IPv4 addresses fro the VPC in the form of a CIDR (e.g. 10.10.0.0/16). The VPC spans all the AZ in the region but when you create a subnet, you specify the IPv4 CIDR block for the subnet, which is a subset of the VPC CIDR block. Each subnet must reside entirely within one Availability Zone and cannot span zones.
+At creation its required to specify a range of IPv4 addresses for the VPC in the form of a CIDR (e.g. 10.10.0.0/16). The VPC spans all the AZ in the region but when you create a subnet, you specify the IPv4 CIDR block for the subnet, which is a subset of the VPC CIDR block. Each subnet must reside entirely within one Availability Zone and cannot span zones.
 
 ![vpc-overview.drawio.png](./_resources/vpc-overview.drawio.png)
 
@@ -62,7 +79,7 @@ It's recommend that you specify a CIDR block from the private IPv4 address range
 
 ![sgandnacl.drawio.png](./_resources/sgandnacl.drawio.png)
 
-A security group apply at the network interface label of the instances in any subnet. Works as a stateful firewall which allows the return traffic automatically because it only supports allow rules implying  there is an implicit deny rule to everything but what is allow.
+A security group apply at the network interface level of the instances in any subnet. Works as a stateful firewall which allows the return traffic automatically because it only supports allow rules implying  there is an implicit deny rule to everything but what is allow.
 
 ![sg-bestpractice.drawio.png](./_resources/sg-bestpractice.drawio.png)
 
