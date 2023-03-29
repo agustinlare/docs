@@ -50,7 +50,7 @@
   - [VMs, Containers, Serverless](#vms-containers-serverless)
   - [Higher Performance Computing Services](#higher-performance-computing-services)
   - [Edge and Hybrid Computing Services](#edge-and-hybrid-computing-services)
-  - [Cost \& Capaciuty Managment Computing Services](#cost--capaciuty-managment-computing-services)
+  - [Cost \& Capacity Managment Computing Services](#cost--capacity-managment-computing-services)
 - [Storage](#storage)
   - [Introduction to S3](#introduction-to-s3)
     - [Common uses](#common-uses)
@@ -124,6 +124,16 @@
   - [AWS Account Root User](#aws-account-root-user)
   - [AWS SSO](#aws-sso)
 - [Application Integretion](#application-integretion)
+  - [SQS](#sqs)
+  - [Amazon Kinsesis](#amazon-kinsesis)
+  - [SNS](#sns)
+  - [API Gateway](#api-gateway)
+  - [AWS Step Functions](#aws-step-functions)
+  - [EventBridge](#eventbridge)
+  - [Services](#services)
+    - [Amazon MQ](#amazon-mq)
+    - [Kafka](#kafka)
+- [Containers](#containers-1)
 
 # AWS Cloud Practitioner
 
@@ -347,19 +357,17 @@ When you choose a region there are four factors you need to consider:
 ## Region vs Global Services
 
 * **Regional Services**: AWS scopes their AWS Managment console on a selected Region. This will determing an AWS service will be launched an what will be seen within an AWS Service's console.
-You Generally dont explicity set the region for a services at the time of creation.
+
 * **Global Services**: Some AWS Services operate across multiple regions and the region will be fixed to “Global” e.g. Amazon S3, CloudFront, Route53, IAM
     For these global services at the time of creation:
     *   There is no concept of region. eg. IAM User
-    *   Asingle region must be explicitly chosen eg. S3 Bucket
-    *   Agroup of regions are chosen eg. CloudFront Distribution
+    *   A single region must be explicitly chosen eg. S3 Bucket
+    *   A group of regions are chosen eg. CloudFront Distribution
 
 ## Availability Zone (AZ)
 
-An AZ is physical location made up of one or more datacenter.
-A datacenter is secured building that contains hunderds of thousends of computers.
-A region will *generally contain 3 Availability Zones
-Datacenters withing a region will be isolated from each other. But the will be close enough to provide low-latancy (< 10 ms).
+An AZ is physical location made up of one or more datacenter. A region will *generally contain 3 Availability Zones 
+Datacenters withing a region will be isolated from each other, but they will be close enough to provide low-latancy (< 10 ms).
 Its common practice to run workloads in at least 3 AZs to ensure services remain available in case one or two datacenters fail.
 AZs are represented by a Region Code, followed by a letter identifier eg. us-east-1a
 
@@ -386,7 +394,7 @@ Each AZ is desgined as an independent failure zone
 ## Point of Presence (PoP)
 
 Points of Presence (PoP) is an intermediate location between an AWS Region and the end user, and this location could be a datacenter or collection of hardware.
-For AWS a Point of Presence is a data center owned by AWS or a trusted partner that is utilized by AWS Services related for content delivery or expediated upload.
+For AWS a Point of Presence is a datacenter owned by AWS or a trusted partner that is utilized by AWS Services related for content delivery or expediated upload.
 
 PoP resources are:
 - Edge Locations
@@ -475,11 +483,11 @@ A solutions architect that is focused solely on architecting technical solutions
 
 A cloud architect need to understand the following terms and factor them into their designed architecture based on the business requirements.
 
-* Availability - Your ability to ensure a service remains available eg. Highly Available (HA)
+* Availability — Your ability to ensure a service remains available eg. Highly Available (HA)
 * Scalability — Your ability to grow rapidly or unimpeded
 * Elasticity — Your ability to shrink and grow to meet the demand
 * Fault Tolerance — Your ability to prevent a failure
-* Disaster Recovery - Your ability to recover from a failure eg. Highly Durable (DR)
+* Disaster Recovery - Your ability to recover from a failure 
 
 A Solutions Architect needs to always consider the following business factors:
 * (Security) How secure is this solution?
@@ -487,8 +495,7 @@ A Solutions Architect needs to always consider the following business factors:
 
 ## High Availablity
 
-Your ability for your service to remain available by ensuring there is
-*no single point of failure and/or ensure a certain level of performance.
+Your ability for your service to remain available by ensuring there is *no single point of failure and/or ensure a certain level of performance.
 
 **How to achive it?**
 Running your workload across multiple Availability Zones ensures that it 1 or 2 AZs become unavailable your service / applications remains available.
@@ -588,7 +595,7 @@ Resource ARNs can include a path, and this could also include wildcard character
 
 # Shared Responsability Model
 
-The Shared Responsibility model is a cloud security framework that defines the securityu obligation of the customer versa the CSP e.g. AWS
+The Shared Responsibility model is a cloud security framework that defines the security obligation of the customer versa the CSP e.g. AWS
 
 Customers are responsible for Security **in** the Cloud. 
 AWS is responsible for Security **of** the Cloud
@@ -607,7 +614,7 @@ AWS is responsible for Security **of** the Cloud
 
 ### Shared Responsability Model - Computing
 
-![sharedresponsibilitymodel-compute](_resources/cloudpractitioner/sharedresponsibilitymodel-compute)
+![sharedresponsibilitymodel-compute](_resources/cloudpractitioner/sharedresponsibilitymodel-compute.png)
 
 ### Shared Responsability Model - Architecture
 
@@ -657,8 +664,7 @@ The Nitro System A combination of dedicated harware and lighweight hypervisor en
 
 Bare Metal Instance You can launch EC2 instance that have no hypervisor so you can run workloads directly on the hardware for maximum performance and control. The M5 and R5 EC2 instances run are bare metal.
 
-* **Amazon Bottlerocket** is a Linux-based open-source operation system that is purpose-built by AWS for running
-containers on Virtual Machines or bare metal hosts
+* **Amazon Bottlerocket** is a Linux-based open-source operation system that is purpose-built by AWS for running containers on Virtual Machines or bare metal hosts
 
 **What is High Performance Computing (HPC)?**
 A cluster of hundreds of thousands of servers with fast connections between each of them with the purpose of boosting computing capacity.
@@ -668,8 +674,7 @@ When you need a supercomputer to perform computational problems too large to run
 
 ## Edge and Hybrid Computing Services
 
-**What is Edge Computing?** When you push your computing workloads outside of your networks to run close to the destination location.
-eg. Pushing computing to run on phones, 1oT Devices, or external servers not within your cloud network.
+**What is Edge Computing?** When you push your computing workloads outside of your networks to run close to the destination location eg. Pushing computing to run on phones, 1oT Devices, or external servers not within your cloud network.
 
 **What is Hybrid Computing?** When you’re able to run workloads on both your on-premise datacenter and AWS Virtual Private Cloud (VPC)
 
@@ -683,17 +688,15 @@ The data-center must being using VMWare for Virtualization.
 * **AWS Local Zones** are edge datacenters located outside of an AWS region so you can use AWS closer to end destination.
 When you need faster computing, storage and databases in populated areas that are outside of an AWS Region
 
-## Cost & Capaciuty Managment Computing Services
+## Cost & Capacity Managment Computing Services
 
 Cost Management: How do we save money?
 Capacity Management: How do we meet the demand of traffic and usages though adding or upgrading servers?
 
 * **EC2 Spot Instances, Reserved Instanced and Savings Plan**
-Ways to save on computing, by paying up in full or partially, by committing to a yearly contracts or by being
-flexible about availability and interruption to computing service.
+Ways to save on computing, by paying up in full or partially, by committing to a yearly contracts or by being flexible about availability and interruption to computing service.
 
-* **AWS Batch** plans, schedules, and executes your batch computing workloads across the full range of AWS
-compute services, can utilize Spot Instance to save money.
+* **AWS Batch** plans, schedules, and executes your batch computing workloads across the full range of AWScompute services, can utilize Spot Instance to save money.
 
 * **AWS Compute Optimizer Groups (ASGs)** automatically adds or remove EC2 servers to meet the current demand of traffic. Will save you money and meet capacity since you only run the amount of servers you need.
 
@@ -725,7 +728,7 @@ worry about setting up and understanding the underlying AWS Services. Similar to
 
 ## Introduction to S3
 
-Amazon S3 is a serverless service that provides highly scalable, durable, and available object storage in the cloud.
+Amazon S3 is a service that provides highly scalable, durable, and available object storage in the cloud.
 
 S3 Objects are objects containing you data, may consist of
 * Key: name of the object
@@ -739,7 +742,7 @@ S3 Bucket is an universal namespace so bucket name must be uniques and they hold
 
 ### Common uses
 * Backup and archiving
-* Data Lakes, so store data in its native format, without needing to transform or preprocess it to later consumption by tools to query, transofmr and analyze
+* Data Lakes, so store data in its native format, without needing to transform or preprocess it to later consumption by tools to query, transform and analyze
 * Content Distributions
 * Application Hosting
 
@@ -763,7 +766,7 @@ Inventory configuration
 ### S3 Storage Clases
 AWS offers a range of S3 storage classes that trade Retrieval Time, Accessibility and Durability for Cheaper Storage
 
-* **S3 Standard (default)** Fast! 99.99% Availability, 11 9’s Durability. Replicated across at least three AZs
+* **S3 Standard (default)** Fast! 99.99% Availability. Replicated across at least three AZs
 * **S3 Intelligent Tiering** Uses ML to analyze object usage and determine the appropriate storage class. Data is moved to the most cost-effective access tier, without any performance impact or added overhead.
 * **S3 Standard-IA (Infrequent Access)** Still Fast! Cheaper if you access files less than once a month.
 Additional retrieval fee is applied. 50% less than Standard (reduced availability)
@@ -785,7 +788,6 @@ AWS Snow Family are storage and compute devices used to physically move data in 
     * 39~80 TB
 * Snowmobile
     * 100 PB of Storage
-
 
 ## Storage Services
 
@@ -931,7 +933,7 @@ CloudFront is a content delivery network services that speeds up the deliver of 
 
 Elastic Compute Cloud (EC2) is a highly configurable virtual server that launches virtual machines called instances.
 
-One of the key benefits of using EC2 is its scalability, enables users to easily scale their computing resources up or down to meet changing demand. EC2's pay-as-you-go pricing model also makes it cost-effective, as they only pay for the resources they use. Alos, offers a high level of flexibility, reliability, and security, with various instance types, operating systems, software options, multiple availability zones, and various security features.
+One of the key benefits of using EC2 is its scalability, enables users to easily scale their computing resources up or down to meet changing demand. EC2's pay-as-you-go pricing model also makes it cost-effective, as they only pay for the resources they use. Also, offers a high level of flexibility, reliability, and security, with various instance types, operating systems, software options, multiple availability zones, and various security features.
 
 What do I would need to choose?
 * OS
@@ -1235,6 +1237,90 @@ It integrates with various AWS services and third-party applications allowing us
 
 # Application Integretion
 
+## SQS
 
+SQS is a Fully managed queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications.
+
+**What is a Messaging System?**
+
+Used to provide asynchronous communication and decouple processes via messages / events
+
+**What is a Queueing System?**
+
+A Queueing system is a messaging system that generally will delete messages once they are consumed. Simple communication. Not Real-time. Have to pull. Not reactive.
+
+> Let's say you have an e-commerce website that needs to process orders. Instead of processing orders synchronously, you could use a message queue to process orders asynchronously. Whenever a customer places an order, the order information is sent as a message to the message queue. The order processing system (consumer) retrieves messages from the queue and processes them at its own pace. This allows for greater scalability and reliability, as the system can handle a larger volume of orders and can recover from failures more easily.
+
+## Amazon Kinsesis
+
+Kinesis is a fully managed solution for collecting, processing, and analyzing streaming data in the cloud. Create Producers which sends data to a stream.
+
+**What is streaming?**
+
+Multiple consumers can react to events (messages)
+Events live in the stream for long periods of time, so complex operations can be applied. Real-time
+
+> Let's say you run an e-commerce website and you want to track user behavior in real-time to improve the user experience and increase sales. You can use Kinesis Data Streams to collect clickstream data from your website, such as the pages users visit, the products they view, and the time they spend on each page.
+
+## SNS
+
+Highly available, durable, secure, fully managed pub/sub messaging service that enables you to decouple microservices, distributed systems, and serverless applications.
+
+**Pub/Sub?**
+
+Simple Notification Service (SNS) is a highly available, durable, secure, fully managed pub/sub messaging service that enables you to decouple microservices, distributed systems, and serverless applications.
+
+
+Publish—subscribe pattern commonly implemented in messaging systems.
+In a pub/sub system the sender of messages (publishers) do not send their messages directly to receivers. They instead send their messages to an event bus. The event bus categorizes their messages into groups. Then receivers of messages (subscribers) subscribe to these groups. Whenever new messages appear within their subscription the messages are immediately delivered to them.
+
+* Publisher have no knowledge of who their subscribers are.
+* Subscribers do not pull for messages.
+* Messages are instead automatically and immediately pushed to subscribers.
+* Messages and events are interchangeable terms in pub/sub
+
+> Let's say you have an e-commerce website that sells products online. You can use SNS to send notifications to subscribers when certain events occur, such as when a customer places an order or when an order is shipped.
+
+## API Gateway
+
+Amazon API Gateway is a solution for creating secure APIs in your cloud environment at any scale.
+Create APIs that act as a front door for applications to access data, business logic, resources, or functionality from back-end services.
+
+**What is an APl Gateway?**
+An API Gateway is a program that sits between a single-entry point and multiple backends.
+API Gateway allows for throttling, logging, routing logic or formatting of the request and response
+
+## AWS Step Functions
+
+Its a fully managed services that enables you to coordinate and orchestrate distribute applications and microservices. Allows you to build and run this applications and services by defining a series of steps or activies thata  need to be executed in a specific order. Automatically triggers and tracks each step, and retries when there are errors, so your application executes in order and as expected.
+
+What is a state machine?
+A state machine is an abstract model which decides how one state moves to another based on a
+series of conditions. Think of a state machine like a flow chart.
+
+> Let's say you have a data processing pipeline that involves several steps, including data ingestion, data validation, data transformation, and data storage. Each step is performed by a separate AWS service, such as Amazon S3, AWS Lambda, and Amazon Redshift.
+
+## EventBridge
+
+Its a serverless event bus services that is used for applications integrations by streaming real-time data to your applications.
+
+**What is an Event Bus?**
+An event bus recives events from a source and routes events to a target based on rules.
+
+> Let's say you have a microservices architecture that consists of several services, such as authentication, order processing, and inventory management. Each service generates events that need to be processed by other services or downstream systems, such as analytics or monitoring tools.
+
+## Services
+
+### Amazon MQ
+
+It's a managed message broker service
+
+### Kafka 
+
+Distributed streaming platform that is used by developers to build real-time streaming applications and data processing pipelines. Automates tasks such as provisioning, scaling, patching, and monitoring of the Kafka cluster, allowing you to focus on building applications that use the Kafka cluster for processing streaming data.
+
+# Containers
+
+Containers are more resource-efficient than VMs because they share the same os kernel, which means they require less overhead and use fewer system resources. Have faster startup times than VMs because they do not need to boot an entire operating system.Its highly portable. Highly scalable because they can be easily replicated and distributed across multiple nodes. Containers make it easy to manage different versions of an application, as each container can run a different version of the application without interfering with other containers.
 
 ![](_resources/cloudpractitioner)
