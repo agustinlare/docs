@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: busybox
+  name: busybox
+spec:
+  # initContainers:
+  # - image: amazon/aws-cli
+  #   name: my-aws-cli
+  #   command: ['aws', 's3', 'ls', 's3://clave-documents-qa/']
+  containers:
+  - image: amazon/aws-cli
+    name: my-aws-cli
+    command: ['aws', 's3', 'ls', 's3://clave-documents-qa/']
+  # - name: busybox
+  #   image: yauritux/busybox-curl
+  #   command: ["/bin/sh","-c"]
+  #   args: ["sleep 3600"]
+  #
+  # - name: mongosh
+  #   image: rtsp/mongosh:latest
+  #
+  # - name: psql
+  #   image: postgres
+  #   command: ['sleep', '3600']
+  #
+  # - name: busybox
+  #   image: redis:7.0.5
+  #   command: ["/bin/sh","-c"]
+  #   args: ["sleep 3600"]
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
